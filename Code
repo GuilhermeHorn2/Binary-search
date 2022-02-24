@@ -1,0 +1,17 @@
+
+int indx(int n,int l[],int i){
+    int low = 0;
+    int high = n-1;
+    while(low < high){
+    int med = (low+high)/2;
+    if(l[med] == i){
+        return med;
+    }
+    else if(l[med] < i){
+        low = med+1;
+    }
+    else if(l[med] > i){
+        high = med - 1;
+    }
+    }
+}
